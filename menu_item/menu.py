@@ -24,7 +24,7 @@ class Menu:
     def dispaly_nenu(self):
         for i in self.item_list:
             if i.available:
-                print(i.name)
+                print(f'{i.name}, in stack')
     def get_totle_items(self):
         print(self.item_list[0].get_info())
         return len(self.item_list)
