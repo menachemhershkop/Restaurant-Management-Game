@@ -11,20 +11,22 @@ class Menu:
         self.item_list.remove(item_name)
     def get_item_by_name(self,name):
         for i in self.item_list:
-            if name == i.name:
-                return f'{name} in stuck'
-            else:
-                return "Item not found"
+            if name == i:
+                return i
+            #     return f'{name} in stuck'
+            # else:
+            #     return "Item not found"
     def get_item_by_category(self,category):
         items=[]
         for i in self.item_list:
             if category in i.category:
                 items.append(i.name)
         return items
-    def dispaly_nenu(self):
+    def disaply_menu(self):
         for i in self.item_list:
             if i.available:
-                print(f'{i.name}, in stack')
+                # print(f'{i.name}, in stack')
+                print(i)
     def get_totle_items(self):
         print(self.item_list[0].get_info())
         return len(self.item_list)
